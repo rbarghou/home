@@ -6,8 +6,8 @@ React component example:
 
 You can add a custom props to an example wrapper:
 
-```js { "props": { "className": "checks" } }
-<Button>I’m transparent!</Button>
+```jsx { "props": { "className": "contained" } }
+<Button variant="contained">Contained</Button>
 ```
 
 Or add padding between examples in a block by passing the `padded` modifier:
