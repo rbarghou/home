@@ -9,6 +9,12 @@ module.exports = {
           test: /\.jsx?$/,
           exclude: /node_modules/,
           loader: "babel-loader",
+          options: {
+            presets: [
+              ["@babel/preset-env", { targets: "defaults" }],
+              "@babel/preset-react",
+            ],
+          },
         },
         // Other loaders that are needed for your components
         {
