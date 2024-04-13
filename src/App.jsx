@@ -1,34 +1,77 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+
+import { 
+  AppBar,
+  Box,
+  Container,
+  CssBaseline,
+  Paper,
+  Stack,
+  ThemeProvider,
+  Toolbar,
+  Typography,
+  createTheme
+} from "@mui/material";
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      light: '#757ce8',
+      main: '#3f50b5',
+      dark: '#00203',
+      contrastText: '#fff',
+    },
+    secondary: {
+      light: '#ff7961',
+      main: '#f44336',
+      dark: '#ba000d',
+      contrastText: '#000',
+    },
+    mode: 'dark'
+  },
+});
+
 
 function App() {
   const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <ThemeProvider theme={theme}>
+      <CssBaseline/>
+      <Container>
+        <AppBar>
+          <Toolbar>
+            <Typography variant="h5">
+              Ramsey Barghouti
+            </Typography>
+          </Toolbar>
+        </AppBar>
+        <Toolbar/>
+      </Container>
+      <Box>
+        <Stack spacing={2}>
+          <Paper>
+            <Typography variant="h3" textAlign={"center"}>
+              Software Engineering
+            </Typography>
+          </Paper>
+          <Paper>
+            <Typography variant="h3" textAlign={"center"}>
+              MLOps
+            </Typography>
+          </Paper>
+          <Paper>
+            <Typography variant="h3" textAlign={"center"}>
+              DevOPS
+            </Typography>
+          </Paper>
+          <Paper>
+            <Typography variant="h3" textAlign={"center"}>
+              Art
+            </Typography>
+          </Paper>
+        </Stack>
+      </Box>
+    </ThemeProvider>
   )
 }
 

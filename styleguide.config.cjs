@@ -1,5 +1,10 @@
 module.exports = {
   components: "src/components/**/*.jsx",
+  theme: {
+    color: {
+      // baseBackground: "#555555",
+    },
+  },
   webpackConfig: {
     entry: "./src/main.jsx",
     module: {
