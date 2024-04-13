@@ -1,6 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
+import FiberApp from './FiberApp.jsx'
+
 // import './index.css'
 import {
   createBrowserRouter,
@@ -15,7 +17,12 @@ const router = createBrowserRouter([
   {
     path: "/home",
     element: <App />
+  },
+  {
+    path: "/fiberapp",
+    element: <FiberApp />
   }
+
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
